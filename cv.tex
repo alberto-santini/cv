@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+
+\usepackage[top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{parskip}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+\usepackage[  hidelinks,
+              bookmarks=false,
+              colorlinks=false,
+              pdfauthor={Alberto Santini},
+              pdftitle={Academic CV of Alberto Santini},
+              pdfsubject={Academic CV of Alberto Santini}
+           ]{hyperref}
+
+\usepackage{enumitem}
+\setlist[enumerate]{leftmargin=*}
+
+\usepackage{xcolor}
+\definecolor{cvblue}{HTML}{046380}
+
+\usepackage[numbers]{natbib}
+\usepackage{bibentry}
+\usepackage{doi}
+
+\usepackage{fontspec}
+\newfontfamily\TitleFont{Avenir}
+\setmainfont[Scale=0.75]{GaramondNo8}
+\linespread{0.75}
+
+\usepackage[medium]{titlesec}
+\titleformat{\section}{\Large\TitleFont}{\thesection.}{0em}{}[\titlerule]
+\titleformat{\subsection}{\large\TitleFont}{\thesubsection.}{0em}{}
+
+\usepackage{paracol}
+
+\newcommand{\cvImportant}[1]{\textcolor{cvblue}{#1}}
+
+\begin{document}
+  \bibliographystyle{plainnat}
+  \nobibliography{personal}
+  \columnratio{0.125,0.875}
+
+  {\huge\TitleFont Alberto Santini}
+
+  \vspace{2em}
+
+  \begin{paracol}{2}
+    {\TitleFont Contacts}
+  \switchcolumn
+    Email: \href{mailto:a.santini@unibo.it}{a.santini@unibo.it}\\
+    Telephone: +39 388 37 77 801
+  \end{paracol}
+
+  \vspace{0.5em}
+
+  \begin{paracol}{2}
+    {\TitleFont Position}
+  \switchcolumn
+    \cvImportant{Postdoctoral Researcher}\\
+    Deutsche Post Chair for the Optimization of Distribution Networks\\
+    Chair held by Prof. \href{http://www.dpor.rwth-aachen.de/}{Michael Schneider}
+  \end{paracol}
+
+  \vspace{0.5em}
+
+  \begin{paracol}{2}
+    {\TitleFont Affiliation}
+  \switchcolumn
+    \cvImportant{RWTH Aachen}\\
+    School of Business and Economics\\
+    Kackertstraße 7 --- D-52072 Aachen (Germany)
+  \end{paracol}
+
+  \input{parts/education.tex}
+  \input{parts/publications.tex}
+  \input{parts/academic_experience.tex}
+  \input{parts/grants.tex}
+  \input{parts/talks.tex}
+  \input{parts/supervised_theses.tex}
+  %\input{parts/schools.tex}
+  \input{parts/work.tex}
+  \input{parts/other.tex}
+\end{document}
