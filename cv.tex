@@ -7,7 +7,8 @@
 \usepackage{tikz}
 \usetikzlibrary{calc}
 
-\usepackage[  hidelinks,
+\usepackage[  unicode,
+              hidelinks,
               bookmarks=false,
               colorlinks=false,
               pdfauthor={Alberto Santini},
@@ -21,8 +22,16 @@
 \usepackage{xcolor}
 \definecolor{cvblue}{HTML}{046380}
 
-\usepackage[numbers]{natbib}
+\usepackage{csquotes}
+\usepackage[natbib,style=authortitle]{biblatex}
 \usepackage{bibentry}
+\addbibresource{bibliography/conferences.bib}
+\addbibresource{bibliography/journals.bib}
+\addbibresource{bibliography/in_preparation.bib}
+\addbibresource{bibliography/techreports.bib}
+\nobibliography{*}
+\usepackage{url}
+\urlstyle{same}
 
 \usepackage{fontspec}
 \newfontfamily\TitleFont{Avenir}
@@ -38,8 +47,6 @@
 \newcommand{\cvImportant}[1]{\textcolor{cvblue}{#1}}
 
 \begin{document}
-  \bibliographystyle{plainnat}
-  \nobibliography{personal}
   \columnratio{0.125,0.875}
 
   {\huge\TitleFont Alberto Santini}
@@ -72,7 +79,7 @@
   \input{parts/grants.tex}
   \input{parts/talks.tex}
   \input{parts/supervised_theses.tex}
-  %\input{parts/schools.tex}
+  % \input{parts/schools.tex}
   \input{parts/work.tex}
   \input{parts/other.tex}
 \end{document}
