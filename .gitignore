@@ -219,3 +219,6 @@ TSWLatexianTemp*
 # expex forward references with \gathertags
 *-tags.tex
 cv\.pdf
+
+# Visual Studio Code
+.vscode
